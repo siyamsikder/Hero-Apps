@@ -6,35 +6,32 @@ import MainLayout from "../Layouts/MainLayout";
 import ErrorPage from "../Pages/ErrorPage";
 import HeroSection from "../Components/HeroSection";
 import AllApps from "../Pages/AllApps";
-import TrendingApps from "../Components/TrendingApps";
+import Installation from "../Pages/Installation";
 
 let router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
+    hydrateFallbackElement: <p>Looding...</p>,
     children: [
       {
         index: true,
         element: <Home />,
-        loader: () => fetch("/TrendingApps.json").then((res) => res.json()),
-
       },
       {
-        index: true,
         element: <HeroSection />,
       },
 
       {
         path: "/apps",
         element: <AllApps />,
-        loader: () => fetch("/AllAplications.json").then((res) => res.json()),
       },
-      // {
-      //   path:"/trendingApps",
-      //   element: <TrendingApps/>,
 
-      // }
+      {
+        path: "/installation/:id",
+        element: <Installation />,
+      },
     ],
   },
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { VscGithub } from "react-icons/vsc";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 const Navbar = () => {
   const link = (
     <>
@@ -11,7 +11,7 @@ const Navbar = () => {
       <Link to="/apps">
         <li className="m-2">Apps</li>
       </Link>
-      <Link to="/">
+      <Link to="/installation">
         <li className="m-2">Installation</li>
       </Link>
     </>
@@ -41,8 +41,13 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
             {link}
           </ul>
-        </div>       
-        <a className="flex justify-center items-center gap-2 text-xl"><img src={logo} alt="Logo" className="h-[40px] w-[40px]"/><span className="bg-gradient-to-r from-[rgba(99,46,227,1)] to-[rgba(159,98,242,1)] bg-clip-text text-transparent font-bold">HERO.IO</span></a>
+        </div>
+        <a className="flex justify-center items-center gap-2 text-xl">
+          <img src={logo} alt="Logo" className="h-[40px] w-[40px]" />
+          <span className="bg-gradient-to-r from-[rgba(99,46,227,1)] to-[rgba(159,98,242,1)] bg-clip-text text-transparent font-bold">
+            HERO.IO
+          </span>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{link}</ul>

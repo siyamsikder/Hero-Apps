@@ -10,9 +10,8 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[rgba(159,98,242,1)] to-[rgba(99,46,227,1)] text-white mt-16">
+    <footer className="bg-gradient-to-r from-[rgba(159,98,242,1)] to-[rgba(99,46,227,1)] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Column 1 - Brand */}
         <div>
           <Link to="/" className="flex items-center gap-2">
             <img
@@ -26,8 +25,6 @@ const Footer = () => {
             Discover the best apps built with innovation and creativity.
           </p>
         </div>
-
-        {/* Column 2 - Quick Links */}
         <div>
           <h3 className="font-semibold text-lg mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
@@ -53,8 +50,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* Column 3 - Resources */}
         <div>
           <h3 className="font-semibold text-lg mb-3">Resources</h3>
           <ul className="space-y-2 text-sm">
@@ -80,8 +75,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* Column 4 - Social Media */}
         <div>
           <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
           <div className="flex gap-4 mt-2">
@@ -108,8 +101,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom bar */}
       <div className="border-t border-white/20 mt-8">
         <p className="text-center text-sm py-4">
           © {new Date().getFullYear()} HERO.IO — All Rights Reserved.
