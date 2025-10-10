@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      <TrendingApps/>
+      <TrendingApps />
     </div>
   );
 };

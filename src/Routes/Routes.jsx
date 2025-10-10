@@ -33,9 +33,9 @@ let router = createBrowserRouter([
         element: <Installation />,
       },
       {
-        path:"/appDetails/:id",
-        element:<AppDetails/>
-      }
+        path: "/appDetails/:id",
+        element: <AppDetails />,
+      },
     ],
   },
 
