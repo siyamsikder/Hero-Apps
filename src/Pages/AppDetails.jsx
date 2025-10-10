@@ -129,9 +129,13 @@ const AppDetails = () => {
         </ResponsiveContainer>
       </div>
 
-      <div>
-        <h1 className="mt-10 font-bold text-2xl">Description</h1>
-        <p className="mt-5">{description}</p>
+      <div className="mt-5  mx-auto  rounded-xl p-6">
+        <h1 className="text-2xl font-bold text-gray-900 mb-4 border-b pb-2">
+          Description
+        </h1>
+        <p className="text-gray-700 text-base leading-relaxed whitespace-pre-line">
+          {description}
+        </p>
       </div>
 
       <ToastContainer
