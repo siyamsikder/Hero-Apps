@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
 import useApps from "../Hooks/useApps";
-
 const TrendingApps = () => {
   const { apps } = useApps();
 
@@ -15,7 +14,7 @@ const TrendingApps = () => {
       </p>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {trendingApps.map((app) => (
-          // <Link key={app.id} to={`/installation/${app.id}`}>
+          <Link to={`/appDetails/${app.id}`}>
           <div className="border border-gray-200 rounded-lg shadow-sm bg-gray-100 p-5 hover:shadow-md transition">
             <img
               src={app.image}
@@ -26,15 +25,15 @@ const TrendingApps = () => {
               {app.title}
             </h3>
             <div className="flex justify-between items-center">
-              <p className="bg-green-100 text-green-700 px-2 py-1 rounded-md text-sm font-medium">
-                {app.downloads || "0+"}
+              <p className="bg-green-100 flex items-center gap-2 text-green-700 px-2 py-1 rounded-md text-sm font-medium">
+               <img className="w-5 h-5" src="https://i.ibb.co.com/PGXBrfrY/fi-18110198-1.png" alt="" /> {app.downloads || "0+"}
               </p>
               <p className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md text-sm font-medium">
                 ⭐ {app.ratingAvg || "N/A"}
               </p>
             </div>
           </div>
-          // </Link>
+             </Link>
         ))}
       </div>
       <div className="flex mt-10 justify-center mb-16">

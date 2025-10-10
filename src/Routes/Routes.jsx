@@ -7,13 +7,13 @@ import ErrorPage from "../Pages/ErrorPage";
 import HeroSection from "../Components/HeroSection";
 import AllApps from "../Pages/AllApps";
 import Installation from "../Pages/Installation";
+import AppDetails from "../Pages/AppDetails";
 
 let router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
-    hydrateFallbackElement: <p>Looding...</p>,
     children: [
       {
         index: true,
@@ -29,9 +29,13 @@ let router = createBrowserRouter([
       },
 
       {
-        path: "/installation/:id",
+        path: "/installation",
         element: <Installation />,
       },
+      {
+        path:"/appDetails/:id",
+        element:<AppDetails/>
+      }
     ],
   },
 
