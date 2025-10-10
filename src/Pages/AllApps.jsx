@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { FaSearch } from "react-icons/fa";
 import useApps from "../Hooks/useApps";
 import Looder from "../Components/Looder";
-
+  
 const AllApps = () => {
   const { apps, loading } = useApps();
   const [searchTerm, setSearchTerm] = useState("");
+
+     useEffect(() => {
+       window.scrollTo(0, 0);
+     }, []);
 
   const filteredApps = apps.filter((app) =>
     app.title.toLowerCase().includes(searchTerm.toLowerCase())

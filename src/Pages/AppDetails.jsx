@@ -20,6 +20,9 @@ const AppDetails = () => {
   const { id } = useParams();
   const { apps, loading } = useApps();
   const [isInstalled, setIsInstalled] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const app = apps.find((a) => String(a.id) === id);
 

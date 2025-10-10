@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 import useApps from "../Hooks/useApps";
 import { Blocks } from "react-loader-spinner";
 import Looder from "./Looder";
 
+
 const TrendingApps = () => {
   const { apps, loading } = useApps();
-
+    useEffect(() =>
+     { window.scrollTo(0, 0) }, [])
   const trendingApps = apps.slice(0, 12);
   console.log(trendingApps);
 
   if (loading) return <Looder />;
+
 
   return (
     <div className="mt-10 px-10">
